@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Calculator</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="https://unpkg.com/vue@3.0.0-beta.12/dist/vue.global.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.0/axios.min.js"></script>
+  </head>
+  <body>
+
+
+    <div id="app" class = "calculator">
+
+      <div class="display">
+        <div class="aAndOperation">{{ a + ' '+ op }}</div>
+        <div>{{ result }}</div>
+      </div>
+
+      <button class="opButton" @click="setOperation('%')">%</button>
+      <button class="opButton" @click="clear">CE</button>
+      <button class="opButton" @click="clear">C</button>
+      <button class="opButton" @click="removeLastAdded">&larr;</button>
+
+      <button class="opButton" @click="inversing"><sup>1</sup>/x</button>
+      <button class="opButton" @click="squaring">x<sup>2</sup></button>
+      <button class="opButton" @click="squarrooting">&#8730;x</button>
+      <button class="opButton" @click="setOperation('÷')">÷</button>
+
+      <button @click="append(7)">7</button>
+      <button @click="append(8)">8</button>
+      <button @click="append(9)">9</button>
+      <button class="opButton" @click="setOperation('x')">x</button>
+
+      <button @click="append(4)">4</button>
+      <button @click="append(5)">5</button>
+      <button @click="append(6)">6</button>
+      <button class="opButton" @click="setOperation('-')">-</button>
+
+      <button @click="append(1)">1</button>
+      <button @click="append(2)">2</button>
+      <button @click="append(3)">3</button>
+      <button class="opButton" @click="setOperation('+')">+</button>
+
+      <button @click="switchSigns"><sup>+</sup>/-</button>
+      <button @click="append(0)">0</button>
+      <button @click="addDot">.</button>
+      <button class="eqButton" @click="equal">=</button>
+
+    </div>
+    <!-- Import app -->
+    <script src="./main.js"></script>
+    <!-- Mount app -->
+    <script>
+      const mountedApp = app.mount('#app')
+    </script>
+  </body>
+</html>

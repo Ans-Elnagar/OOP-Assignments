@@ -1,0 +1,27 @@
+.calculator{
+	width: 244px;
+	margin: 30px auto;
+	background-color: rgb(196, 194, 194);
+	font-size: 40px;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-auto-rows: minmax(50px, auto);
+}
+.display{
+	grid-column: 1 / 5;
+	text-align: right;
+}
+.aAndOperation{
+	font-size: 15px;
+}
+button{
+	width: 60px;
+	border: 1px solid rgb(196, 194, 194);
+	font-size: 25px;
+}
+.opButton{
+	background-color: rgb(228, 227, 227);
+}
+.eqButton{
+	background-color: rgb(141, 198, 245);
+}
